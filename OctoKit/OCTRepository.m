@@ -78,6 +78,8 @@ static NSString *const OCTRepositoryHTMLIssuesPath = @"issues";
 	}
 
 	dictionaryValue[@"language"] = externalRepresentation[@"language"] ?: NSNull.null;
+	dictionaryValue[@"forksCount"] = externalRepresentation[@"forks_count"] ?: @0;
+	dictionaryValue[@"stargazersCount"] = externalRepresentation[@"stargazers_count"] ?: @0;
 	dictionaryValue[@"repoDescription"] = externalRepresentation[@"description"] ?: NSNull.null;
 	dictionaryValue[@"private"] = externalRepresentation[@"private"] ?: @NO;
 	dictionaryValue[@"fork"] = externalRepresentation[@"fork"] ?: @NO;

@@ -29,6 +29,12 @@
 // The language of this repository.
 @property (nonatomic, copy, readonly) NSString *language;
 
+// The forks count of this repository.
+@property (nonatomic, assign, readonly) NSInteger forksCount;
+
+// The stargazers count of this repository.
+@property (nonatomic, assign, readonly) NSInteger stargazersCount;
+
 // Whether this repository is private to the owner.
 @property (nonatomic, assign, getter = isPrivate, readonly) BOOL private;
 
