@@ -27,6 +27,8 @@ static NSString *const OCTRepositoryHTMLIssuesPath = @"issues";
 		@"defaultBranch": @"default_branch",
 		@"forkParent": @"parent",
 		@"forkSource": @"source",
+		@"forksCount": @"forks_count",
+		@"stargazersCount": @"stargazers_count",
 	}];
 }
 
