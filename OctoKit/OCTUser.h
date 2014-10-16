@@ -23,6 +23,12 @@
 // or the `rawLogin` may not work directly with the API.
 @property (nonatomic, copy, readonly) NSString *rawLogin;
 
+// The bio about this account
+@property (atomic, copy, readonly) NSString *bio;
+
+// The hireable status about this account
+@property (atomic, assign, readonly) BOOL hireable;
+
 // Returns a user that has the given name and email address.
 + (instancetype)userWithName:(NSString *)name email:(NSString *)email;
 

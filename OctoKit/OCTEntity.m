@@ -28,6 +28,9 @@
 		@"publicRepoCount": @"public_repos",
 		@"privateRepoCount": @"owned_private_repos",
 		@"diskUsage": @"disk_usage",
+		@"location": @"location",
+		@"createdDate": @"created_at",
+		@"updatedDate": @"updated_at"
 	}];
 }
 

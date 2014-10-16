@@ -54,6 +54,14 @@
 // The plan that this account is on.
 @property (atomic, strong, readonly) OCTPlan *plan;
 
+// The location with this account
+@property (atomic, copy, readonly) NSString *location;
+
+// The created and updated date for this account
+@property (atomic, copy, readonly) NSDate *createdDate;
+@property (atomic, copy, readonly) NSDate *updatedDate;
+
+
 // Updates the receiver's repositories with data from the set of remote
 // repositories.
 - (void)mergeRepositoriesWithRemoteCounterparts:(NSArray *)remoteRepositories;

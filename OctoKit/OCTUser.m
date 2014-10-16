@@ -31,6 +31,15 @@
 	return [self modelWithDictionary:userDict error:NULL];
 }
 
+#pragma mark MTLJSONSerializing
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+	return [super.JSONKeyPathsByPropertyKey mtl_dictionaryByAddingEntriesFromDictionary:@{
+	  @"bio": @"bio",
+	  @"hireable": @"hireable",
+	  }];
+}
+
 #pragma mark MTLModel
 
 - (void)mergeRawLoginFromModel:(OCTUser *)model {
