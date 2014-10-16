@@ -9,6 +9,7 @@
 #import "OCTEntity.h"
 #import "OCTPlan.h"
 #import "OCTRepository.h"
+#import "NSValueTransformer+OCTPredefinedTransformerAdditions.h"
 
 @implementation OCTEntity
 
@@ -44,6 +45,14 @@
 
 + (NSValueTransformer *)planJSONTransformer {
 	return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:OCTPlan.class];
+}
+
++ (NSValueTransformer *)createdDateJSONTransformer {
+	return [NSValueTransformer valueTransformerForName:OCTDateValueTransformerName];
+}
+
++ (NSValueTransformer *)updatedDateJSONTransformer {
+	return [NSValueTransformer valueTransformerForName:OCTDateValueTransformerName];
 }
 
 #pragma mark Merging
