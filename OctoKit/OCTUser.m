@@ -40,6 +40,16 @@
 	  }];
 }
 
++ (NSValueTransformer *)hireableJSONTransformer {
+	return [MTLValueTransformer transformerWithBlock:^NSNumber *(id hireable) {
+		if (hireable == nil || [hireable isKindOfClass:NSNull.class]) {
+			return @NO;
+		} else {
+			return hireable;
+		}
+	}];
+}
+
 #pragma mark MTLModel
 
 - (void)mergeRawLoginFromModel:(OCTUser *)model {
